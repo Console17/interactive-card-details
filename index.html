@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive card details form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <picture>
+      <source
+        media="(max-width: 767px)"
+        srcset="./images/bg-main-mobile.png"
+        width="100%"
+        height="40%"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="./images/bg-main-desktop.png"
+      />
+      <img
+        src="./images/bg-main-desktop.png"
+        alt="desktop background"
+        class="background"
+      />
+    </picture>
+    <img
+      src="./images/bg-card-front.png"
+      class="card-front card"
+      alt="card front"
+    />
+    <h2 class="card-number">0000 0000 0000 0000</h2>
+    <h3 class="cardholder-name">Felicia Leire</h3>
+    <h3 class="exp-date">09/00</h3>
+    <img
+      src="./images/bg-card-back.png"
+      class="card-back card"
+      alt="card back"
+    />
+    <h3 class="cvc">000</h3>
+    <form class="form">
+      <label for="cardholder">CARDHOLDER NAME</label>
+      <input type="text" id="cardholder" placeholder="e.g Jane Appleseed" />
+      <p class="cardholder-p error">Can't be blank</p>
+      <label for="number">CARD NUMBER</label>
+      <input type="text" id="number" placeholder="e.g 1234 5678 9123 0000" />
+      <p class="number-p error">
+        Can't be blank and should containe only numbers
+      </p>
+      <div class="form-div">
+        <div class="label-div">
+          <label for="date" class="date-label">EXP. DATE (MM/YY)</label>
+          <div>
+            <input
+              type="number"
+              id="date"
+              class="month exp-input"
+              placeholder="MM"
+            />
+            <input
+              type="number"
+              id="date"
+              class="year exp-input"
+              placeholder="YY"
+            />
+            <p class="exp-p error">Can't be blank</p>
+          </div>
+        </div>
+        <div>
+          <label for="cvc-numbers" class="cvc-label">CVC</label>
+          <input
+            type="number"
+            id="cvc-numbers"
+            placeholder="e.g 123"
+            class="cvc-input"
+          />
+          <p class="cvc-p error">Can't be blank</p>
+        </div>
+      </div>
+
+      <button class="confirm-button">Confirm</button>
+    </form>
+    <section class="submit">
+      <img src="./images/icon-complete.svg" class="icon-complete" />
+      <h1 class="header">THANK YOU!</h1>
+      <p class="transaction-p">We've added your card details</p>
+      <button class="continue-button">Continue</button>
+    </section>
+  </body>
+</html>
